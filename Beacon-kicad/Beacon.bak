@@ -1,0 +1,162 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Beacon-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "WSPR Beacon - 28MHz"
+Date "2016-10-05"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATTINY24-P IC?
+U 1 1 57F4ADF7
+P 4300 2900
+F 0 "IC?" H 3450 3650 50  0000 C CNN
+F 1 "ATTINY24-P" H 5000 2150 50  0000 C CNN
+F 2 "DIP14" H 4300 2700 50  0000 C CIN
+F 3 "" H 4300 2900 50  0000 C CNN
+	1    4300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM7805 U?
+U 1 1 57F53599
+P 2500 2350
+F 0 "U?" H 2650 2154 50  0000 C CNN
+F 1 "LM7805" H 2500 2550 50  0000 C CNN
+F 2 "" H 2500 2350 50  0000 C CNN
+F 3 "" H 2500 2350 50  0000 C CNN
+	1    2500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2300 3250 2300
+$Comp
+L BARREL_JACK CON?
+U 1 1 57F53A48
+P 1350 2400
+F 0 "CON?" H 1350 2650 50  0000 C CNN
+F 1 "BARREL_JACK" H 1350 2200 50  0000 C CNN
+F 2 "" H 1350 2400 50  0000 C CNN
+F 3 "" H 1350 2400 50  0000 C CNN
+	1    1350 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2300 2100 2300
+$Comp
+L C C?
+U 1 1 57F53D43
+P 2100 2600
+F 0 "C?" H 2125 2700 50  0000 L CNN
+F 1 "0.33uF" H 2125 2500 50  0000 L CNN
+F 2 "" H 2138 2450 50  0000 C CNN
+F 3 "" H 2100 2600 50  0000 C CNN
+	1    2100 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 57F53D8E
+P 3050 2600
+F 0 "C?" H 3075 2700 50  0000 L CNN
+F 1 "0.1uF" H 3075 2500 50  0000 L CNN
+F 2 "" H 3088 2450 50  0000 C CNN
+F 3 "" H 3050 2600 50  0000 C CNN
+	1    3050 2600
+	0    1    1    0   
+$EndComp
+Connection ~ 2500 2600
+Wire Wire Line
+	3200 2600 3200 2300
+Connection ~ 3200 2300
+$Comp
+L Earth #PWR?
+U 1 1 57F53F79
+P 1700 2500
+F 0 "#PWR?" H 1700 2250 50  0001 C CNN
+F 1 "Earth" H 1700 2350 50  0001 C CNN
+F 2 "" H 1700 2500 50  0000 C CNN
+F 3 "" H 1700 2500 50  0000 C CNN
+	1    1700 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1700 2500 1650 2500
+$Comp
+L Earth #PWR?
+U 1 1 57F53FB4
+P 2500 2750
+F 0 "#PWR?" H 2500 2500 50  0001 C CNN
+F 1 "Earth" H 2500 2600 50  0001 C CNN
+F 2 "" H 2500 2750 50  0000 C CNN
+F 3 "" H 2500 2750 50  0000 C CNN
+	1    2500 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2600 2500 2750
+Wire Wire Line
+	1950 2600 1950 2300
+Connection ~ 1950 2300
+Wire Wire Line
+	2250 2600 2900 2600
+$Comp
+L LED D?
+U 1 1 57F54CC5
+P 6100 1350
+F 0 "D?" H 6100 1450 50  0000 C CNN
+F 1 "LED" H 6100 1250 50  0000 C CNN
+F 2 "" H 6100 1350 50  0000 C CNN
+F 3 "" H 6100 1350 50  0000 C CNN
+	1    6100 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D?
+U 1 1 57F54D70
+P 6100 1800
+F 0 "D?" H 6100 1900 50  0000 C CNN
+F 1 "LED" H 6100 1700 50  0000 C CNN
+F 2 "" H 6100 1800 50  0000 C CNN
+F 3 "" H 6100 1800 50  0000 C CNN
+	1    6100 1800
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
